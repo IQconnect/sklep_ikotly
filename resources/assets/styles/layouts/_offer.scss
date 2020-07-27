@@ -1,0 +1,108 @@
+.offer {
+  margin: gutter(2) auto;
+  color: $secondary;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: baseline;
+
+  @include media("<=lg") {
+    grid-template-columns: 1fr 1fr;
+    gap: gutter(1);
+    margin: 0 auto;
+  }
+
+  @include media("<500px") {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  &__column {
+    @include cssLock("padding-top", 360, $container, (20, 150));
+    //padding-top: gutter(15);
+
+    @include media("<=lg") {
+      //padding-top: gutter(5);
+    }
+
+    @include media("<500px") {
+      padding: 0;
+    }
+  }
+
+  &__image {
+    @include cssLock("max-width", 360, $container, (350, 560));
+
+    margin: auto;
+
+    @include media("<=lg") {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__box {
+    display: block;
+    max-width: gutter(40);
+    margin: auto;
+    height: gutter(25);
+    transition: $transition;
+    color: $secondary;
+
+    &:hover {
+      transform: translateX(10px);
+      text-decoration: none;
+      color: $secondary;
+
+      .title {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+
+    @include media("<500px") {
+      height: auto;
+      padding: gutter(2.5) 0;
+    }
+
+    @include media(">=lg") {
+      padding: gutter(2);
+      margin: auto;
+      height: 100%;
+
+      &--right {
+        margin-left: - gutter(3);
+        margin-top: gutter(4);
+      }
+
+      &--left {
+        margin-right: - gutter(4);
+        margin-top: gutter(4);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: gutter(5);
+    position: relative;
+    transition: $transition;
+  }
+
+  &__link {
+    display: block;
+    margin-top: gutter(0.5);
+    font-weight: $light;
+    text-decoration: underline;
+    color: $black;
+
+    &:hover {
+      margin-left: gutter(0.5);
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.section {
+  padding: gutter(8) 0;
+  margin: 0 auto;
+  background: $white;
+  position: relative;
+
+  @include media("<=lg") {
+    padding: gutter(6) 0;
+  }
+
+  @include media("<md") {
+    padding: gutter(5) 0;
+  }
+
+  &--relative {
+    position: relative;
+    background: $white;
+  }
+
+  &--first {
+    padding-top: 135px;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1.99fr;
+
+    @include media("<lg") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    margin-bottom: gutter(4);
+  }
+
+  &__header {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  &--bg {
+    background: url("../images/bg.jpg");
+    background-position: top;
+  }
+
+  &--color {
+    background-color: $gray-light;
+  }
+
+  &--gradient {
+    background-color: $gray-light;
+
+    @include media(">=lg") {
+      background: linear-gradient($bg), linear-gradient($bg-dark);
+      background-size: 35.7% 100%, 133.33333% 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--map {
+    margin-top: gutter(10);
+  }
+}

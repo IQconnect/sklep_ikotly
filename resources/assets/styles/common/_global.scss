@@ -1,0 +1,30 @@
+html,
+body {
+  font-family: $font-main;
+  font-weight: $regular;
+  color: $black;
+  line-height: 30px;
+  font-size: 16px;
+  background: $white;
+}
+
+p {
+  margin: 0;
+  font-family: $font-main;
+}
+
+strong {
+  font-weight: $bold !important;
+}
+
+#caRatySideup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 1005;
+
+  @include media("<md") {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,41 @@
+.menu {
+  margin-top: gutter(5);
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: gutter(80);
+    margin: gutter(2) auto;
+  }
+
+  &__button {
+    color: $black;
+    border-radius: 5px;
+    padding: gutter(0.8) gutter(1);
+    margin: gutter(0.5);
+    font-size: 19px;
+    font-family: $font-main;
+    font-weight: $bold;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &--active {
+      background-color: $primary;
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__content {
+    box-shadow: $shadow;
+    padding: gutter(4);
+  }
+}

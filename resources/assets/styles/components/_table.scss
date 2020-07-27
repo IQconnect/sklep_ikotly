@@ -1,0 +1,24 @@
+.table {
+  font-size: 20px;
+
+  thead {
+    font-size: 22px;
+    font-weight: $bold;
+
+    th {
+      border: 0;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: $gray;
+      }
+    }
+
+    td {
+      padding: gutter(2.5) gutter(1.5);
+    }
+  }
+}

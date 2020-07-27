@@ -1,0 +1,34 @@
+.icons {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: gutter(3);
+  text-align: center;
+  margin-top: - gutter(18);
+  z-index: 200;
+
+  &__item {
+    background-color: $white;
+    border-radius: gutter(5) gutter(5) 0 0;
+    padding: gutter(5);
+    box-shadow: $shadow;
+  }
+
+  &__img {
+    height: gutter(7);
+    width: auto;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: $bold;
+    font-size: 25px;
+    padding: gutter(3) 0 gutter(1);
+  }
+
+  &__desc {
+    font-size: 19px;
+    padding: 0;
+    margin: 0;
+  }
+}

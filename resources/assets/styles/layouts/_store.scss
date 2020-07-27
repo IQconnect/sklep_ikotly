@@ -1,0 +1,100 @@
+.store {
+  position: relative;
+  background-color: $bg;
+  overflow: hidden;
+
+  @include media(">=lg") {
+    background: linear-gradient($bg), linear-gradient($gray);
+    background-size: 35.7% 100%, 133.33333% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.99fr;
+    align-items: center;
+
+    @include media("<=lg") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info {
+    padding: gutter(10) 0;
+    max-width: gutter(45);
+
+    @include media("<=lg") {
+      margin: auto;
+      padding: gutter(6) 0;
+      text-align: center;
+      background-color: $gray;
+      position: relative;
+
+      &::after {
+        content: "";
+        background: $gray;
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+      }
+
+      &::before {
+        content: "";
+        background: $gray;
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: -100%;
+      }
+    }
+  }
+
+  &__text {
+    margin: gutter(4) 0;
+    max-width: gutter(45);
+  }
+
+  &__slider {
+    margin: gutter(5) 0;
+    text-align: center;
+  }
+
+  &__product {
+    width: 100%;
+  }
+
+  &__button {
+    margin: gutter(1) 0;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: gutter(6) auto;
+    width: 100%;
+  }
+
+  &__image {
+    //width: gutter(30);
+    padding: 0 gutter(1);
+
+    img {
+      height: gutter(35);
+      width: auto;
+      position: contain;
+    }
+
+    @include media("<=lg") {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}

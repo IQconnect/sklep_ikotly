@@ -1,0 +1,12 @@
+.banner {
+  @include cssLock("height", 360, $container, (200, 445));
+
+  width: 100%;
+  padding: gutter(2);
+
+  &__item {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

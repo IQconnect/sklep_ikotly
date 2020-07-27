@@ -1,0 +1,61 @@
+.download {
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+  }
+
+  &__tab {
+    background-color: darken($gray, 5);
+    text-align: center;
+
+    a {
+      color: $gray-dark;
+      text-transform: uppercase;
+      font-family: $font-main;
+      font-size: 18px;
+      font-weight: $medium;
+    }
+
+    .active {
+      border-radius: 0;
+    }
+  }
+
+  &__files {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: gutter(3);
+  }
+
+  &__file {
+    margin: 0;
+
+    a {
+      font-size: 22px;
+      padding: gutter(3) gutter(3) gutter(3) 0;
+      font-weight: $medium;
+      font-family: $font-main;
+      display: flex;
+      align-items: flex-start;
+      border-radius: $gutter;
+      text-decoration: none;
+      color: $primary;
+
+      &::before {
+        content: url("../images/files.svg");
+        margin-right: gutter(3);
+        transition: $transition;
+      }
+
+      &:hover {
+        color: darken($primary, 22);
+        text-decoration: none;
+
+        &::before {
+          filter: brightness(0);
+        }
+      }
+    }
+  }
+}

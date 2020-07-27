@@ -1,0 +1,44 @@
+.boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0;
+  color: $black;
+
+  @include media("<=lg") {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0;
+  }
+
+  &__item {
+    padding: gutter(6) gutter(3);
+
+    @include media(">=lg") {
+      padding: gutter(12) gutter(5.5);
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: $bg;
+    }
+  }
+
+  &__text {
+    margin: gutter(2) 0;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media(">=lg") {
+      min-height: gutter(20);
+      margin: gutter(4) 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: gutter(1);
+  margin: gutter(8) auto;
+  padding: 0;
+
+  @include media("<md") {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &--columns {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto gutter(8);
+    padding-left: gutter(4);
+
+    @include media("<=lg") {
+      padding-left: 0;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    height: gutter(30);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

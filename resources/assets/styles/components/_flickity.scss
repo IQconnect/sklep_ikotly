@@ -1,0 +1,46 @@
+.flickity-page-dots {
+  bottom: 0 !important;
+}
+
+.flickity-page-dots .dot {
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 1 !important;
+  background: $white !important;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background-color: $primary !important;
+}
+
+.flickity-button {
+  margin: 0 gutter(8);
+
+  @include media("<=lg") {
+    margin: 0;
+  }
+}
+
+.products-carousel {
+  .dot {
+    background: $gray-dark !important;
+  }
+}
+
+.main-carousel {
+  .flickity-page-dots {
+    bottom: gutter(5) !important;
+
+    @include media("<=lg") {
+      bottom: gutter(2) !important;
+    }
+  }
+
+  .flickity-button {
+    margin: 0 gutter(8);
+
+    @include media("<=lg") {
+      display: none;
+    }
+  }
+}

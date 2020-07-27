@@ -1,0 +1,73 @@
+.hero {
+  position: relative;
+  max-height: 85vh;
+  margin-top: 100px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    background: rgba($black, 0.5);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__bg {
+    position: fixed;
+    top: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  &__content {
+    @include cssLock("margin-left", 360, $container, (100, 650));
+
+    position: relative;
+    text-align: center;
+    max-width: gutter(75);
+    z-index: 2;
+
+    @include media("<lg") {
+      margin: auto;
+    }
+  }
+
+  &__header {
+    margin-top: 0;
+    position: relative;
+    display: block;
+  }
+
+  &__subheader {
+    color: lighten($primary, 15);
+    padding: gutter(1) gutter(2);
+    max-width: gutter(50);
+    display: block;
+    margin: auto;
+  }
+
+  &__text {
+    display: block;
+    opacity: 0.8;
+    margin-bottom: gutter(3);
+
+    @include media("<md") {
+      br {
+        display: none;
+      }
+    }
+  }
+}

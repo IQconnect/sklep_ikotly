@@ -1,0 +1,23 @@
+.infobar {
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $gray;
+  font-weight: $regular;
+  font-size: 15px;
+
+  @include media("<=900px") {
+    display: none;
+  }
+
+  &__left,
+  &__right {
+    padding: gutter(0.5);
+  }
+
+  &__left {
+    color: $primary;
+    font-weight: $bold;
+  }
+}

@@ -1,0 +1,92 @@
+%text {
+  margin: 0;
+  padding: 0;
+}
+
+.headline {
+  @include cssLock("font-size", 360, $container, (50, 90));
+
+  font-family: $font-title;
+  font-weight: $bold;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.title {
+  @include cssLock("font-size", 360, $container, (25, 45));
+
+  font-family: $font-title;
+  font-weight: $bold;
+  text-transform: uppercase;
+  color: $black;
+  display: block;
+  position: relative;
+
+  @extend %text;
+
+  &--small {
+    @include cssLock("font-size", 360, $container, (20, 25));
+
+    &::after {
+      content: "";
+      background-color: $primary;
+      width: gutter(5);
+      height: gutter(0.5);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: calc(100% + 15px);
+    }
+  }
+
+  &--product {
+    @include cssLock("font-size", 360, $container, (20, 35));
+
+    //text-transform: none;
+    margin-bottom: gutter(8);
+
+    &::after {
+      content: "";
+      background-color: $primary;
+      width: gutter(5);
+      height: gutter(0.5);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: calc(100% + 15px);
+    }
+  }
+}
+
+.pretitle {
+  @include cssLock("font-size", 360, $container, (17, 20));
+
+  font-family: $font-title;
+  color: $secondary-light;
+  font-weight: $medium;
+  text-transform: uppercase;
+
+  @extend %text;
+}
+
+.text {
+  @include cssLock("font-size", 360, $container, (15, 17));
+
+  font-family: $font-main;
+  font-weight: $regular;
+  letter-spacing: 0;
+
+  @extend %text;
+
+  &--2 {
+    @include cssLock("font-size", 360, $container, (16, 21));
+  }
+
+  &--3 {
+    @include cssLock("font-size", 360, $container, (19, 25));
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
