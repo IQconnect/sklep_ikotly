@@ -114,14 +114,14 @@ the readme will list any important changes.
         @endif
       </div>
     @php
-      //-the_content();
+      //the_content();
     @endphp
       <section class="sectionn">
         <div class="container">
           @php
-            //do_action( 'woocommerce_before_single_product_summary' );
-            //do_action( 'woocommerce_single_product_summary' );
-            //do_action( 'woocommerce_after_single_product_summary' );
+            // do_action( 'woocommerce_before_single_product_summary' );
+            // do_action( 'woocommerce_single_product_summary' );
+            // do_action( 'woocommerce_after_single_product_summary' );
             do_action( 'woocommerce_after_single_product' );
             //wc_get_template_part('content', 'single-product');
           @endphp

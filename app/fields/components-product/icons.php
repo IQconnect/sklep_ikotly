@@ -13,8 +13,6 @@ $icons = new FieldsBuilder('icons', ['label' => 'boxy z ikonami']);
 
 $icons
     ->addRepeater('icons', ['label' => 'ikony'])
-      ->addImage('icon', ['label' => 'Ikona'])
-      ->addText('title', ['label' => 'Tytuł'])
-      ->addTextarea('desc', ['rows' => 2, 'new_lines' => 'br', 'label' => 'Opis']);
+      ->addImage('icon', ['label' => 'Ikona']);
 
 return $icons;

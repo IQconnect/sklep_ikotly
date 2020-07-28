@@ -1,9 +1,11 @@
 
-<section class="section @if($data['bg'] == 'ciemne') section--color @endif">
+<section class="editor section @if($data['bg'] == 'ciemne') section--color @endif">
   <div class="container">
-    <h2 class="title title--product">
-      {{ $data['title'] }}
-    </h2>
+    @if($data['title'])
+      <h2 class="title title--product">
+        {{ $data['title'] }}
+      </h2>
+    @endif
     <div>
       {!! $data['text'] !!}
     </div>

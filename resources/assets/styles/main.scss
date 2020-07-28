@@ -19,7 +19,11 @@
 @import "./autoload/**/*";
 
 // woocommerce
+@import "woocommerce/store-replace";
 @import "woocommerce/product";
+@import "woocommerce/banner-img";
+@import "woocommerce/download";
+@import "woocommerce/icons";
 
 // components
 @import "components/typography";
@@ -41,23 +45,18 @@
 @import "layouts/footer";
 @import "layouts/slider";
 @import "layouts/banner";
-@import "layouts/banner-img";
 @import "layouts/hero";
 @import "layouts/small-hero";
 //@import "layouts/text-img";
-//@import "layouts/icons";
 @import "layouts/section";
 @import "layouts/content-page";
 @import "layouts/content-single";
 @import "layouts/post-item";
 @import "layouts/gallery";
 @import "layouts/products";
-@import "layouts/product";
 @import "layouts/contact";
 //@import "layouts/infobar";
 @import "layouts/menu";
 @import "layouts/offer";
 @import "layouts/boxes";
 @import "layouts/store";
-@import "layouts/download";
-

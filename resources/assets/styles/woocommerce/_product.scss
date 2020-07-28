@@ -1,38 +1,62 @@
-.store__info {
-  .woocommerce {
-    &-Price-amount {
-      color: red;
-      font-weight: bold;
-      font-size: 24px;
-      padding: gutter(2) 0;
-      display: block;
-    }
+.product {
+  p {
+    margin-bottom: gutter(2);
   }
 
-  .product_title {
-    font-weight: $bold;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: $font-title;
+    padding-top: gutter(1.5);
   }
 
-  .posted_in {
-    display: none;
-  }
+  h1,
+  h2 {
+    @include cssLock("font-size", 360, $container, (20, 35));
 
-  .cart {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
+    margin-bottom: gutter(8);
+    font-family: $font-title;
+    font-weight: $bold;
+    text-transform: uppercase;
+    color: $black;
+    display: block;
+    position: relative;
 
-    .input-text {
-      height: gutter(4.7);
-      border-radius: 0;
-      border: 2px solid $primary;
+    &::after {
+      content: "";
+      background-color: $primary;
+      width: gutter(5);
+      height: gutter(0.5);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: calc(100% + 15px);
     }
+  }
 
-    .button-wo {
-      margin: 0 gutter(2);
-      outline: 0;
-      border: 0;
+  .editor {
+    ul {
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "\2022";
+          color: $primary;
+          font-weight: bold;
+          font-size: 22px;
+          padding-bottom: 2px;
+          line-height: 0;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
     }
   }
 }

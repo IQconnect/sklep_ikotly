@@ -1,0 +1,18 @@
+.icons {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+
+  &__img {
+    height: auto;
+    width: 300px;
+    padding: gutter(8) 0 0;
+
+    @include media("<md") {
+      padding: gutter(4) 0 0;
+    }
+  }
+}

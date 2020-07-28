@@ -16,7 +16,6 @@ $builder
             ->addLayout(get_field_partial('components.small-hero'))
             ->addLayout(get_field_partial('components.text-img'))
             ->addLayout(get_field_partial('components.text'))
-            ->addLayout(get_field_partial('components.icons'))
             ->addLayout(get_field_partial('components.page-title'))
             ->addLayout(get_field_partial('components.hr'))
             ->addLayout(get_field_partial('components.contact'))

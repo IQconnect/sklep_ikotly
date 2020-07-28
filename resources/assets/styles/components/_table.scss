@@ -1,12 +1,16 @@
+table,
 .table {
   font-size: 20px;
+  width: 100%;
 
   thead {
     font-size: 22px;
     font-weight: $bold;
+    border-bottom: 1px solid #dee2e6;
 
     th {
       border: 0;
+      padding: gutter(0.8) gutter(1.5);
     }
   }
 

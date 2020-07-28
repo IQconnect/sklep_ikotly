@@ -10,15 +10,17 @@
     </h2>
     <div class="table-responsive">
       <table class="table">
-        <thead>
-          <tr>
-            @foreach($th as $col)
-              <th>
-                {{ $col['c'] }}
-              </th>
-            @endforeach
-          </tr>
-        </thead>
+        @if($th)
+          <thead>
+            <tr>
+              @foreach($th as $col)
+                <th>
+                  {{ $col['c'] }}
+                </th>
+              @endforeach
+            </tr>
+          </thead>
+        @endif
         <tbody>
           @foreach($body as $row)
             <tr>

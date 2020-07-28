@@ -11,6 +11,7 @@ $builderp
         ->addFlexibleContent('components', ['button_label' => 'Dodaj komponent'])
             ->addLayout(get_field_partial('components-product.text'))
             ->addLayout(get_field_partial('components-product.table'))
+            ->addLayout(get_field_partial('components-product.icons'))
             ->addLayout(get_field_partial('components-product.banner-img'))
             ->addLayout(get_field_partial('components-product.download'))
             ->addLayout(get_field_partial('components-product.download-simple'));
