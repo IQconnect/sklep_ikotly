@@ -8,10 +8,12 @@
         <div class="text boxes__text">
           {!! $item['desc'] !!}
         </div>
-        <a href="{{ $item['link']['url'] }}" class="button">
-          Więcej
-        </a>
+        @if($item['link'])
+          <a href="{{ $item['link']['url'] }}" class="button">
+            Więcej
+          </a>
+        @endif
       </div>
     @endforeach
-    </div>
-  </section>
+  </div>
+</section>

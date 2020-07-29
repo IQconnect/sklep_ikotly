@@ -1,4 +1,4 @@
-.product {
+.product-desc {
   p {
     margin-bottom: gutter(2);
   }
@@ -42,9 +42,6 @@
       list-style: none;
 
       li {
-        display: flex;
-        align-items: center;
-
         &::before {
           content: "\2022";
           color: $primary;
@@ -57,6 +54,11 @@
           margin-left: -1em;
         }
       }
+    }
+
+    iframe {
+      width: gutter(80);
+      height: gutter(40);
     }
   }
 }

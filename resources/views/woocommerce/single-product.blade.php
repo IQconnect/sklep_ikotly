@@ -105,7 +105,7 @@ the readme will list any important changes.
     @php
       do_action( 'woocommerce_before_single_product' );
     @endphp
-      <div class="product">
+      <div class="product-desc">
         @if($sections)
           @foreach ($sections as $section)
             @php ($sectionName = $section['acf_fc_layout']) @endphp

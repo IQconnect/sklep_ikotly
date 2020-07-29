@@ -20,10 +20,11 @@
 
 // woocommerce
 @import "woocommerce/store-replace";
-@import "woocommerce/product";
+@import "woocommerce/product-desc";
 @import "woocommerce/banner-img";
 @import "woocommerce/download";
 @import "woocommerce/icons";
+@import "woocommerce/power";
 
 // components
 @import "components/typography";
