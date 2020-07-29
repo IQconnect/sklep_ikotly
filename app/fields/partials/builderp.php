@@ -15,6 +15,7 @@ $builderp
             ->addLayout(get_field_partial('components-product.icons'))
             ->addLayout(get_field_partial('components-product.youtube'))
             ->addLayout(get_field_partial('components-product.banner-img'))
+            ->addLayout(get_field_partial('components-product.gallery-product'))
             ->addLayout(get_field_partial('components-product.download'))
             ->addLayout(get_field_partial('components-product.download-simple'))
             ->addLayout(get_field_partial('components-product.boxes'));
