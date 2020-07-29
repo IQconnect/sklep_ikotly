@@ -13,6 +13,7 @@ $builderp
             ->addLayout(get_field_partial('components-product.power'))
             ->addLayout(get_field_partial('components-product.table'))
             ->addLayout(get_field_partial('components-product.icons'))
+            ->addLayout(get_field_partial('components-product.youtube'))
             ->addLayout(get_field_partial('components-product.banner-img'))
             ->addLayout(get_field_partial('components-product.download'))
             ->addLayout(get_field_partial('components-product.download-simple'))

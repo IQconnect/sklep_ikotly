@@ -1,0 +1,18 @@
+.youtube {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: gutter(4);
+
+  &--single {
+    display: block;
+
+    iframe {
+      max-width: gutter(80);
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: gutter(45);
+  }
+}
