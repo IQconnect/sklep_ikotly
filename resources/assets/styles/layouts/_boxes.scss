@@ -10,6 +10,10 @@
     padding: 0;
   }
 
+  &--product {
+    background-color: darken($white, 2);
+  }
+
   &__item {
     padding: gutter(6) gutter(3);
 
@@ -27,6 +31,12 @@
 
     &:nth-child(even) {
       background-color: $bg;
+    }
+
+    &--product {
+      &:nth-child(even) {
+        background-color: darken($bg, 3);
+      }
     }
   }
 
