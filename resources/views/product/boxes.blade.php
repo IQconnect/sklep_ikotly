@@ -2,9 +2,11 @@
   <div class="container boxes">
     @foreach($data['boxes'] as $item)
       <div class="boxes__item boxes__item--product">
-        <h3 class="title">
-          {{ $item['title'] }}
-        </h3>
+        @if($item['title'])
+          <h3 class="title">
+            {{ $item['title'] }}
+          </h3>
+        @endif
         <div class="text boxes__text">
           {!! $item['desc'] !!}
         </div>

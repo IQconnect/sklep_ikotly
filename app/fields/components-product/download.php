@@ -13,7 +13,7 @@ $download = new FieldsBuilder('download', ['label' => 'Do pobrania - zakładki']
 
 $download
     ->addSelect('bg', ['label' => 'Tło','choices' => ['jasne', 'ciemne'], 'default_value' => ['jasne'],'allow_null' => 0])
-    ->addText('title', ['label' => 'Tytuł sekcji', 'default_value' => 'Do pobrania'])
+    ->addText('title', ['label' => 'Tytuł sekcji (opcjonalny)', 'default_value' => 'Do pobrania'])
     ->addRepeater('tabs', ['label' => 'Zakładki', 'layout' => 'block'])
         ->addText('title', ['label' => 'Tytuł zakładki'])
         ->addRepeater('files')

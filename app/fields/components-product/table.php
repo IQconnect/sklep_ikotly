@@ -13,7 +13,7 @@ $table = new FieldsBuilder('table', ['label' => 'Tabela']);
 
 $table
     ->addSelect('bg', ['label' => 'Tło','choices' => ['jasne', 'ciemne'], 'default_value' => ['jasne'],'allow_null' => 0])
-    ->addText('title', ['label' => 'Tytuł sekcji'])
+    ->addText('title', ['label' => 'Tytuł sekcji (opcjonalny'])
     ->addField('table', 'table', ['label' => 'Tabela']);
 
 return $table;

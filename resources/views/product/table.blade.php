@@ -5,9 +5,11 @@
 @endphp
 <section class="section @if($data['bg'] == 'ciemne') section--color @endif">
   <div class="container">
-    <h2 class="title title--product">
-      {{ $data['title'] }}
-    </h2>
+    @if($data['title'])
+      <h2 class="title title--product">
+        {{ $data['title'] }}
+      </h2>
+    @endif
     <div class="table-responsive">
       <table class="table">
         @if($th)

@@ -1,8 +1,10 @@
 <section class="section @if($data['bg'] == 'ciemne') section--color @endif">
   <div class="container">
-    <h2 class="title title--product">
-      {{ $data['title'] }}
-    </h2>
+    @if($data['title'])
+      <h2 class="title title--product">
+        {{ $data['title'] }}
+      </h2>
+    @endif
     <div class="download">
       <ul class="nav nav-pills mb-3 download__tabs" id="pills-tab" role="tablist">
         @foreach($data['tabs'] as $tab)
