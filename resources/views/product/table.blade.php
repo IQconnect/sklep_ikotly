@@ -7,7 +7,7 @@
   <div class="container">
     @if($data['title'])
       <h2 class="title title--product">
-        {{ $data['title'] }}
+        {{  $data['title']  }}
       </h2>
     @endif
     <div class="table-responsive">
@@ -17,7 +17,7 @@
             <tr>
               @foreach($th as $col)
                 <th>
-                  {{ $col['c'] }}
+                  {!! $col['c'] !!}
                 </th>
               @endforeach
             </tr>
@@ -28,7 +28,7 @@
             <tr>
               @foreach($row as $col)
                 <td>
-                  {{ $col['c'] }}
+                  {!! $col['c'] !!}
                 </td>
               @endforeach
             </tr>

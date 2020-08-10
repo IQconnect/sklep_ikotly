@@ -128,3 +128,10 @@ function blog() {
     return $posts;
 }
 
+function wplab_remove_skus_from_product_page( $enabled ) {
+    if ( ! is_admin() && is_product() ) {
+        return false;
+    }
+    return $enabled;
+}
+add_filter( 'wc_product_sku_enabled', 'wplab_remove_skus_from_product_page' );

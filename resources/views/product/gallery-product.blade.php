@@ -9,7 +9,9 @@
       @foreach ($data['gallery'] as $img)
         <div class="gallery-product__item">
           <div class="gallery-product__image">
-            <img src="{{ $img['image']['url'] }}">
+            <a data-fancybox="gallery" href="{{ $img['image']['url'] }}">
+              <img src="{{ $img['image']['url'] }}">
+            </a>
           </div>
           @if($img['title'])
             <span class="text gallery-product__title">

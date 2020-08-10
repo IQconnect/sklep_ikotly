@@ -8,11 +8,9 @@
             $galleryName = rand(1, 999);
           @endphp
           @foreach ($item['images'] as $img)
-            <div class="gallery__image">
-              <a data-fancybox="gallery{{$galleryName}}" href="{{ $img['url'] }}">
-                <img class="gallery__image" src="{{ $img['url'] }}">
-              </a>
-            </div>
+            <a data-fancybox="gallery" href="{{ $img['url'] }}" class="gallery__image">
+              <img class="gallery__image" src="{{ $img['url'] }}">
+            </a>
           @endforeach
         </div>
       </div>
