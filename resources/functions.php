@@ -135,3 +135,18 @@ function wplab_remove_skus_from_product_page( $enabled ) {
     return $enabled;
 }
 add_filter( 'wc_product_sku_enabled', 'wplab_remove_skus_from_product_page' );
+
+function check_parent($id) {
+    $current_cat = get_queried_object()->term_id;
+
+    if(in_array($id, get_ancestors($current_cat, 'product_cat'))) {
+        return true;
+    }
+}
+
+
+function check_current($id) {
+    if(get_queried_object()->term_id == $id) {
+        return true;
+    }
+}

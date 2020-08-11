@@ -20,6 +20,7 @@
 
 // woocommerce
 @import "woocommerce/store-replace";
+@import "woocommerce/archive";
 @import "woocommerce/product-desc";
 @import "woocommerce/banner-img";
 @import "woocommerce/download";
@@ -28,6 +29,7 @@
 @import "woocommerce/youtube";
 @import "woocommerce/gallery-product";
 @import "woocommerce/text-img";
+@import "woocommerce/cat-nav";
 
 // components
 @import "components/typography";
