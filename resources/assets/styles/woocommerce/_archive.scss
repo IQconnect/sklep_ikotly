@@ -19,13 +19,26 @@
         flex-direction: column;
         justify-content: center;
         margin: auto;
+        text-decoration: none;
 
         img {
           width: gutter(20);
           height: gutter(20);
           object-fit: contain;
+          object-position: center;
           margin: auto;
           text-align: center;
+        }
+
+        h2 {
+          font-size: 25px;
+          color: $black;
+          padding-top: gutter(4);
+          text-align: center;
+        }
+
+        .count {
+          display: none;
         }
       }
     }
@@ -65,6 +78,12 @@
         }
       }
 
+      .woocommerce-loop-product__title {
+        font-size: 25px;
+        color: $black;
+        padding-top: gutter(2);
+      }
+
       .amount {
         color: $info;
         font-size: 22px;
@@ -72,7 +91,7 @@
 
       .button {
         color: $white;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-family: $font-main;
         padding: gutter(1) gutter(3);
         margin-top: gutter(2);
@@ -82,6 +101,11 @@
         border-radius: 0;
         cursor: pointer;
         outline: 0;
+
+        &:hover {
+          background-color: $primary-light;
+          color: $white;
+        }
       }
     }
   }

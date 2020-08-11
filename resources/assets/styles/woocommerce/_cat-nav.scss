@@ -5,7 +5,13 @@
   width: 20%;
 
   &__block {
-    display: block;
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: gutter(2);
+    //flex-direction: row;
+    //justify-content: space-between;
+    align-items: center;
     background-color: $white;
     padding: gutter(2);
     margin-bottom: gutter(2);
@@ -26,6 +32,20 @@
         background-color: lighten($primary, 5);
         color: $white;
       }
+    }
+  }
+
+  &__image {
+    width: gutter(7);
+    height: gutter(7);
+    right: gutter(1);
+    bottom: gutter(1);
+    padding-left: gutter(2);
+
+    img {
+      height: 100%;
+      object-fit: contain;
+      object-position: left;
     }
   }
 

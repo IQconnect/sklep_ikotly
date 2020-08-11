@@ -6,7 +6,12 @@
     @foreach($categories as $item)
       <li>
         <a class="cat-nav__block @if(is_product_category($item->name) || check_parent($item->term_id)) cat-nav__block--active @endif" href={{ get_term_link($item->term_id) }}>
-          {{ $item->name }}
+          <span>
+            {{ $item->name }}
+          </span>
+          <div class="cat-nav__image">
+            {!! get_cat_cover($item->term_id) !!}
+          </div>
         </a>
       <ul class="cat-nav__submenu @if(is_product_category($item->name) || check_parent($item->term_id)) cat-nav__submenu--active @endif">
           @php

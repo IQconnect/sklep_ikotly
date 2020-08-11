@@ -150,3 +150,18 @@ function check_current($id) {
         return true;
     }
 }
+
+function get_cat_cover($id) {
+    $thumbnail_id = get_woocommerce_term_meta($id, 'thumbnail_id', true );
+    $image = wp_get_attachment_url($thumbnail_id);
+    return "<img src='{$image}' alt='kategoria' />";
+}
+
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+function new_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options -> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 15;
+  return $cols;
+}
