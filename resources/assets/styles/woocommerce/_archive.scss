@@ -1,3 +1,12 @@
+.woocommerce-breadcrumb {
+  margin: 0 0 gutter(3) !important;
+  color: $primary !important;
+
+  a {
+    color: $primary !important;
+  }
+}
+
 .wooarchive {
   display: grid;
   grid-template-columns: gutter(35) auto;
@@ -49,7 +58,7 @@
         h2 {
           display: block;
           color: $black;
-          font-size: 25px;
+          font-size: 24px;
           padding-top: gutter(4);
           text-align: center;
           transition: $transition;
@@ -78,11 +87,12 @@
       height: gutter(20);
       overflow: hidden;
       margin: auto;
+      transition: $transition;
     }
 
     .product {
       background-color: $white;
-      padding: gutter(6);
+      padding: gutter(5);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -94,6 +104,16 @@
         margin: auto;
         text-decoration: none;
 
+        &:hover {
+          h2 {
+            color: $primary;
+          }
+
+          .wooarchive__products-cover {
+            transform: translateY(-4px);
+          }
+        }
+
         img {
           width: 100%;
           height: 100%;
@@ -103,12 +123,13 @@
       }
 
       .woocommerce-loop-product__title {
-        font-size: 25px;
+        font-size: 24px;
         color: $black;
         padding-top: gutter(2);
         font-family: $font-title;
         min-height: gutter(12);
         display: block;
+        transition: $transition;
       }
 
       .amount {
@@ -117,6 +138,7 @@
         font-size: 22px;
         padding: gutter(2) 0 gutter(1);
         display: inline-block;
+        transition: $transition;
 
         &::after {
           content: "";

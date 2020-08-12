@@ -17,6 +17,10 @@
     background: $white;
   }
 
+  &--archive {
+    padding: gutter(4);
+  }
+
   &--first {
     padding-top: 135px;
   }

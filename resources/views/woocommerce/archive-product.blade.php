@@ -28,11 +28,11 @@ the readme will list any important changes.
       </div>
     </div>
   </section>
-  <section class="section section--color">
+  <section class="section section--archive section--color">
     <div class="container">
       @php
-        // do_action('get_header', 'shop');
-        // do_action('woocommerce_before_main_content');
+        do_action('get_header', 'shop');
+        do_action('woocommerce_before_main_content');
       @endphp
       {{--
         <header class="woocommerce-products-header">
