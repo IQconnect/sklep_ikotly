@@ -30,10 +30,12 @@ the readme will list any important changes.
   </section>
   <section class="section section--archive section--color">
     <div class="container">
-      @php
-        do_action('get_header', 'shop');
-        do_action('woocommerce_before_main_content');
-      @endphp
+      {{-- @if(!is_shop())
+        @php
+          do_action('get_header', 'shop');
+          do_action('woocommerce_before_main_content');
+        @endphp
+      @endif --}}
       {{--
         <header class="woocommerce-products-header">
           @if(apply_filters('woocommerce_show_page_title', true))
