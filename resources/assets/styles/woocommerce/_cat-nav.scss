@@ -1,8 +1,8 @@
 .cat-nav {
+  font-family: $font-main;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 20%;
 
   &__block {
     position: relative;
@@ -59,6 +59,11 @@
       margin-bottom: gutter(2);
     }
 
+    &:hover {
+      background-color: lighten($bg, 0.5);
+      color: $black;
+    }
+
     &--active {
       display: block;
     }
@@ -71,10 +76,23 @@
     margin-bottom: gutter(0.8);
     background-color: $white;
     padding: gutter(0.5) gutter(2);
+    box-shadow: 0 6px 15px rgba($black, 0.04);
+    transition: $transition;
+
+    &:hover {
+      background-color: lighten($bg, 0.8);
+      text-decoration: none;
+      color: $black;
+    }
 
     &--active {
       background-color: $primary;
       color: $white;
+
+      &:hover {
+        background-color: lighten($primary, 5);
+        color: $white;
+      }
     }
   }
 }

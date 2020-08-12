@@ -45,7 +45,7 @@ the readme will list any important changes.
           @endphp
         </header>
       --}}
-      <div class="wooarchive">
+      <div class="wooarchive @if(is_shop()) wooarchive--full @endif">
         @include('partials.cat-nav')
         <div @if(is_product_category()) class="wooarchive__grid" @endif>
           @if(woocommerce_product_loop())
