@@ -5,7 +5,7 @@
       font-weight: bold;
       font-size: 24px;
       padding: gutter(2) 0;
-      display: block;
+      display: inline-block;
     }
   }
 
@@ -27,6 +27,15 @@
       height: gutter(4.7);
       border-radius: 0;
       border: 2px solid $primary;
+      padding-left: gutter(1.6);
+    }
+
+    select {
+      height: gutter(4.7);
+      border-radius: 0;
+      border: 2px solid $primary;
+      padding: 0 gutter(1);
+      margin-right: gutter(1.5);
     }
 
     .button-wo {
@@ -34,5 +43,30 @@
       outline: 0;
       border: 0;
     }
+  }
+
+  .variations_button {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .variations_form {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .value {
+    position: relative;
+  }
+
+  .reset_variations {
+    position: absolute;
+    left: 0;
+    bottom: - gutter(3);
+  }
+
+  .woocommerce-variation.single_variation {
+    margin-left: -160px;
+    margin-bottom: 60px;
   }
 }

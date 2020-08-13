@@ -70,7 +70,7 @@ the readme will list any important changes.
       the_post();
       do_action('woocommerce_shop_loop');
     @endphp
-      <section class="store section--first">
+      <section class="store section--first store--product">
       <div class="container">
         <div class="store__wrapper">
           <div class="store__info">

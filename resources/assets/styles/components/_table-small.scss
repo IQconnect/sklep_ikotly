@@ -1,0 +1,27 @@
+.table-small {
+  font-size: 16px;
+  width: gutter(30);
+
+  thead {
+    font-size: 16px;
+    font-weight: $bold;
+    border-bottom: 1px solid #dee2e6;
+
+    th {
+      border: 0;
+      padding: gutter(0.8) gutter(1.5);
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: $gray;
+      }
+    }
+
+    td {
+      padding: gutter(0.5) gutter(2);
+    }
+  }
+}
