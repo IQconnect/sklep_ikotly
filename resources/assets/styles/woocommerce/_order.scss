@@ -1,0 +1,68 @@
+.woocommerce-checkout {
+  font-family: $font-main;
+
+  form {
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: gutter(2);
+    }
+
+    h3 {
+      margin-bottom: gutter(3);
+    }
+
+    label {
+      margin: 0;
+    }
+
+    input,
+    textarea {
+      font-size: 16px;
+      border: 1px solid #ddd;
+      padding: gutter(1.4) gutter(1.8);
+    }
+
+    textarea {
+      height: gutter(10) !important;
+    }
+
+    .select2-selection--single {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 gutter(1);
+    }
+
+    .select2-selection__arrow {
+      height: 48px !important;
+      right: gutter(1.2) !important;
+    }
+
+    .woocommerce-additional-fields {
+      margin-top: gutter(4);
+    }
+
+    #order_review,
+    #order_review_heading {
+      width: 50%;
+      padding-left: 1.5vw;
+      float: right;
+      clear: right;
+    }
+
+    .col2-set {
+      width: 50%;
+      float: left;
+      padding-right: 1.5vw;
+
+      .col-1,
+      .col-2 {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
