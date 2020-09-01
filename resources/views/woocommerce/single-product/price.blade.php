@@ -26,9 +26,13 @@ global $product;
   {!! $product->get_price_html() !!}
 </p>
 
+{{-- @dump($product->attributes) --}}
+
 @php
   $powers = $product->attributes['moc-kw']['options'];
+  $powers2 = $product->attributes['moc-kotla-kw']['options'];
   $liters = $product->attributes['pojemnosc-l']['options'];
+  $liters2 = $product->attributes['pojemnosc-zasobnika-l']['options'];
 @endphp
 @if($powers)
   <table class="table-small mb-5">
@@ -58,6 +62,34 @@ global $product;
     </tbody>
   </table>
 @endif
+@if($powers2)
+  <table class="table-small mb-5">
+    <thead>
+      <tr>
+        <th>
+          Moc kotła
+        </th>
+        <th>
+          Cena
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($product->get_available_variations() as $item)
+        <tr>
+          <td>
+            {{ $item['attributes']['attribute_moc-kotla-kw'] }} kW
+          </td>
+          <td class="primary text--bold">
+            <strong>
+              {{ $item['display_price'] }} zł
+            </strong>
+          </td>
+        </tr>
+      @endforeach
+    </tbody>
+  </table>
+@endif
 @if($liters)
   <table class="table-small mb-5">
     <thead>
@@ -75,6 +107,34 @@ global $product;
         <tr>
           <td>
             {{ $item['attributes']['attribute_pojemnosc-l'] }} L
+          </td>
+          <td class="primary text--bold">
+            <strong>
+              {{ $item['display_price'] }} zł
+            </strong>
+          </td>
+        </tr>
+      @endforeach
+    </tbody>
+  </table>
+@endif
+@if($liters2)
+  <table class="table-small mb-5">
+    <thead>
+      <tr>
+        <th>
+          Pojemność [L]
+        </th>
+        <th>
+          Cena
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($product->get_available_variations() as $item)
+        <tr>
+          <td>
+            {{ $item['attributes']['attribute_pojemnosc-zasobnika-l'] }} L
           </td>
           <td class="primary text--bold">
             <strong>
