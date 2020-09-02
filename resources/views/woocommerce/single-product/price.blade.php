@@ -26,8 +26,6 @@ global $product;
   {!! $product->get_price_html() !!}
 </p>
 
-{{-- @dump($product->attributes) --}}
-
 @php
   $powers = $product->attributes['moc-kw']['options'];
   $powers2 = $product->attributes['moc-kotla-kw']['options'];

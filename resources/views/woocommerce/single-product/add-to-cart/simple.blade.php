@@ -54,3 +54,13 @@ if ( $product->is_in_stock() ) : ?>
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>
+
+
+<p class="mt-4">
+	<a href="#" onClick="window.open('https://ewniosek.credit-agricole.pl/eWniosek/simulator.jsp?PARAM_TYPE=RAT&amp;PARAM_PROFILE=PSP2002238&amp;PARAM_CREDIT_AMOUNT={{ $product->price }}','MyWindow','width=820,height=630'); return false;">
+		<img src="@asset('images/caraty.png')">
+	</a>
+	<a href="#" onClick="window.open('https://irata.bgzbnpparibas.pl/eshop-form/calc?RequestedAmount={{ $product->price }}&amp;AgreementNo=2202924&amp;CreditType=123465;100206;100254','MyWindow','width=820,height=630'); return false;">
+		<img src="@asset('images/bnpraty.png')">
+	</a>
+<p>
