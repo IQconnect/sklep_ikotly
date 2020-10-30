@@ -39,9 +39,17 @@
     }
 
     .button-wo {
-      margin: 0 gutter(2);
+      margin: 0;
       outline: 0;
       border: 0;
+    }
+
+    .quantity {
+      margin-right: gutter(2);
+
+      &.hidden {
+        margin-right: 0;
+      }
     }
   }
 
