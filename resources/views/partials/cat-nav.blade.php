@@ -1,6 +1,6 @@
 @if(is_product_category())
   @php
-    $categories = get_terms('product_cat', array('parent' => 0))
+    $categories = get_terms('product_cat', array('parent' => 0));
   @endphp
   <ul class="cat-nav">
     @foreach($categories as $item)

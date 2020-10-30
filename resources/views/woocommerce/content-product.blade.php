@@ -25,6 +25,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 
 @endphp
+
+
 <li @php wc_product_class( '', $product ); @endphp>
 	@php
 	/**

@@ -1,0 +1,51 @@
+.top-bar {
+  background: $gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+  color: $black;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+      padding: gutter(0.2);
+    }
+
+    a {
+      padding: gutter(0.8) gutter(0.5);
+      font-size: 15px;
+    }
+  }
+
+  &__basket {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+
+    a {
+      display: inline-block;
+      padding: gutter(1) gutter(2);
+      color: $white;
+      background-color: red;
+      text-decoration: none;
+      transition: $transition;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .table-small {
   font-size: 16px;
-  width: gutter(30);
+  width: gutter(44);
 
   thead {
     font-size: 16px;
@@ -9,7 +9,7 @@
 
     th {
       border: 0;
-      padding: gutter(0.8) gutter(1.5);
+      padding: gutter(0.8) gutter(2);
     }
   }
 
@@ -22,6 +22,17 @@
 
     td {
       padding: gutter(0.5) gutter(2);
+    }
+  }
+
+  &__icons {
+    img {
+      height: gutter(2);
+      width: auto;
+
+      &:first-of-type {
+        margin-right: gutter(0.8);
+      }
     }
   }
 }

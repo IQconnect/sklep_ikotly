@@ -1,3 +1,26 @@
+<div class="top-bar">
+  <div class="container top-bar__row">
+    <div>
+      @if (has_nav_menu('left'))
+        {!! wp_nav_menu(
+          [
+            'theme_location' => 'left',
+            'menu_class' => 'top-bar__nav',
+          ]) !!}
+      @endif
+    </div>
+    <div>
+      {!! do_shortcode('[wcas-search-form]') !!}
+    </div>
+    @if (has_nav_menu('right'))
+      {!! wp_nav_menu(
+        [
+          'theme_location' => 'right',
+          'menu_class' => 'top-bar__basket',
+        ]) !!}
+    @endif
+  </div>
+</div>
 <header class="header" header>
   <div class="container">
     <div class="row header__row">

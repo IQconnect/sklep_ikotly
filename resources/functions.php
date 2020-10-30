@@ -165,3 +165,6 @@ function new_loop_shop_per_page( $cols ) {
   $cols = 15;
   return $cols;
 }
+
+register_nav_menu( 'left', 'left menu' );
+register_nav_menu( 'right', 'right menu' );

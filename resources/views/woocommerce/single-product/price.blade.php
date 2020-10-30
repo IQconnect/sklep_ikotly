@@ -27,117 +27,69 @@ global $product;
 </p>
 
 @php
-  $powers = $product->attributes['moc-kw']['options'];
-  $powers2 = $product->attributes['moc-kotla-kw']['options'];
-  $liters = $product->attributes['pojemnosc-l']['options'];
-  $liters2 = $product->attributes['pojemnosc-zasobnika-l']['options'];
+  $powers = $product->attributes['pa_moc']['options'];
+  $liters = $product->attributes['pa_pojemnosc']['options'];
+  $vat = $product->attributes['pa_vat']['options']
 @endphp
-@if($powers)
+@if($product->attributes)
   <table class="table-small mb-5">
     <thead>
       <tr>
-        <th>
-          Moc kotła
-        </th>
+        @if($powers)
+          <th>
+            Moc
+          </th>
+        @endif
+        @if($liters)
+          <th>
+            Pojemność
+          </th>
+        @endif
+        @if($vat)
+          <th>
+            VAT
+          </th>
+        @endif
         <th>
           Cena
+        </th>
+        <th>
+          Oblicz ratę
         </th>
       </tr>
     </thead>
     <tbody>
       @foreach($product->get_available_variations() as $item)
         <tr>
-          <td>
-            {{ $item['attributes']['attribute_moc-kw'] }} kW
-          </td>
+          @if($powers)
+            <td>
+              {{ $item['attributes']['attribute_pa_moc'] }} kW
+            </td>
+          @endif
+          @if($liters)
+            <td>
+              {{ $item['attributes']['attribute_pa_pojemnosc'] }} L
+            </td>
+          @endif
+          @if($vat)
+            <td>
+              {{ $item['attributes']['attribute_pa_vat'] }} %
+            </td>
+          @endif
           <td class="primary text--bold">
             <strong>
-              {{ $item['display_price'] }} zł
+              {{ number_format($item['display_price'], 2, ',', '') }} zł
             </strong>
           </td>
-        </tr>
-      @endforeach
-    </tbody>
-  </table>
-@endif
-@if($powers2)
-  <table class="table-small mb-5">
-    <thead>
-      <tr>
-        <th>
-          Moc kotła
-        </th>
-        <th>
-          Cena
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach($product->get_available_variations() as $item)
-        <tr>
           <td>
-            {{ $item['attributes']['attribute_moc-kotla-kw'] }} kW
-          </td>
-          <td class="primary text--bold">
-            <strong>
-              {{ $item['display_price'] }} zł
-            </strong>
-          </td>
-        </tr>
-      @endforeach
-    </tbody>
-  </table>
-@endif
-@if($liters)
-  <table class="table-small mb-5">
-    <thead>
-      <tr>
-        <th>
-          Pojemność [L]
-        </th>
-        <th>
-          Cena
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach($product->get_available_variations() as $item)
-        <tr>
-          <td>
-            {{ $item['attributes']['attribute_pojemnosc-l'] }} L
-          </td>
-          <td class="primary text--bold">
-            <strong>
-              {{ $item['display_price'] }} zł
-            </strong>
-          </td>
-        </tr>
-      @endforeach
-    </tbody>
-  </table>
-@endif
-@if($liters2)
-  <table class="table-small mb-5">
-    <thead>
-      <tr>
-        <th>
-          Pojemność [L]
-        </th>
-        <th>
-          Cena
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach($product->get_available_variations() as $item)
-        <tr>
-          <td>
-            {{ $item['attributes']['attribute_pojemnosc-zasobnika-l'] }} L
-          </td>
-          <td class="primary text--bold">
-            <strong>
-              {{ $item['display_price'] }} zł
-            </strong>
+            <div class="table-small__icons">
+              <a href="#" onClick="window.open('https://ewniosek.credit-agricole.pl/eWniosek/simulator.jsp?PARAM_TYPE=RAT&amp;PARAM_PROFILE=PSP2002238&amp;PARAM_CREDIT_AMOUNT={{ $item['display_price'] }}','MyWindow','width=820,height=630'); return false;">
+                <img src="@asset('images/calogo.png')">
+              </a>
+              <a href="#" onClick="window.open('https://irata.bgzbnpparibas.pl/eshop-form/calc?RequestedAmount={{ $item['display_price'] }}&amp;AgreementNo=2202924&amp;CreditType=123465;100206;100254','MyWindow','width=820,height=630'); return false;">
+                <img src="@asset('images/bnplogo.png')">
+              </a>
+            </div>
           </td>
         </tr>
       @endforeach

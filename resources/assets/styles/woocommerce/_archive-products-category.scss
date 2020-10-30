@@ -1,28 +1,5 @@
-.woocommerce-breadcrumb {
-  margin: 0 0 gutter(4) !important;
-  color: $primary !important;
-
-  a {
-    color: $primary !important;
-  }
-}
-
 .wooarchive {
-  display: grid;
-  grid-template-columns: gutter(35) auto;
-  font-family: $font-main;
-
-  &--full {
-    grid-template-columns: auto;
-  }
-
-  &__categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    list-style-type: none;
-    grid-gap: gutter(2);
-    padding: gutter(2) 0;
-
+  &__products {
     .product-category {
       background-color: $white;
       padding: 0;
@@ -71,3 +48,4 @@
     }
   }
 }
+

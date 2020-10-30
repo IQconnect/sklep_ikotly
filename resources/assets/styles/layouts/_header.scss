@@ -9,7 +9,7 @@
   width: 100%;
   z-index: 900;
   position: fixed;
-  top: 0;
+  top: gutter(4.4);
   background-color: $white;
   //height: gutter(8.5);
   display: flex;

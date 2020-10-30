@@ -21,6 +21,8 @@
 // woocommerce
 @import "woocommerce/store-replace";
 @import "woocommerce/archive";
+@import "woocommerce/archive-products";
+@import "woocommerce/archive-products-category";
 @import "woocommerce/product-desc";
 @import "woocommerce/banner-img";
 @import "woocommerce/download";
@@ -50,6 +52,7 @@
 // layouts
 @import "layouts/preloader";
 @import "layouts/header";
+@import "layouts/top-bar";
 @import "layouts/footer";
 @import "layouts/slider";
 @import "layouts/banner";
