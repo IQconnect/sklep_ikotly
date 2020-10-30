@@ -51,7 +51,7 @@
   }
 
   .variations_form {
-    display: flex;
+    display: block;
     align-items: flex-end;
   }
 
@@ -63,10 +63,10 @@
     position: absolute;
     left: 0;
     bottom: - gutter(3);
+    display: none !important;
   }
 
   .woocommerce-variation.single_variation {
-    margin-left: -160px;
-    margin-bottom: 60px;
+    margin-bottom: gutter(4);
   }
 }

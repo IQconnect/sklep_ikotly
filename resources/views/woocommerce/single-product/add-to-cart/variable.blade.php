@@ -32,6 +32,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php else : ?>
 		<div class="variations" cellspacing="0">
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
+					<div>
 						<div class="label">
 							<label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>">
 								<?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?>
@@ -49,6 +50,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 								echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
 							?>
 						</div>
+					</div>
 				<?php endforeach; ?>
 			</tbody>
 		</div>
@@ -59,7 +61,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				 * Hook: woocommerce_before_single_variation.
 				 */
 				do_action( 'woocommerce_before_single_variation' );
-
 				/**
 				 * Hook: woocommerce_single_variation. Used to output the cart button and placeholder for variation data.
 				 *

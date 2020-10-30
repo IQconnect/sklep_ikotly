@@ -1,0 +1,21 @@
+.button-variable-item {
+  border: 1px solid $primary !important;
+  box-shadow: none !important;
+
+  &.selected {
+    background-color: $primary !important;
+    color: $white !important;
+  }
+}
+
+.store__info .cart select {
+  box-shadow: none !important;
+  border-color: $primary !important;
+  outline-color: $primary !important;
+}
+
+.variations {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: gutter(3);
+}

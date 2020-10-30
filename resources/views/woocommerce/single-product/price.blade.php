@@ -31,6 +31,7 @@ global $product;
   $liters = $product->attributes['pa_pojemnosc']['options'];
   $vat = $product->attributes['pa_vat']['options']
 @endphp
+
 @if($product->attributes)
   <table class="table-small mb-5">
     <thead>
