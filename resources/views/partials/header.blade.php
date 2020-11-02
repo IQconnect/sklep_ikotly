@@ -9,16 +9,18 @@
           ]) !!}
       @endif
     </div>
-    <div>
-      {!! do_shortcode('[wcas-search-form]') !!}
+    <div class="top-bar__right">
+      <div>
+        {!! do_shortcode('[wcas-search-form]') !!}
+      </div>
+      @if (has_nav_menu('right'))
+        {!! wp_nav_menu(
+          [
+            'theme_location' => 'right',
+            'menu_class' => 'top-bar__basket',
+          ]) !!}
+      @endif
     </div>
-    @if (has_nav_menu('right'))
-      {!! wp_nav_menu(
-        [
-          'theme_location' => 'right',
-          'menu_class' => 'top-bar__basket',
-        ]) !!}
-    @endif
   </div>
 </div>
 <header class="header" header>

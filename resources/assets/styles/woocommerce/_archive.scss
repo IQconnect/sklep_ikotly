@@ -23,10 +23,12 @@
     grid-gap: gutter(2);
     padding: gutter(2) 0;
 
-    .product-category {
+    .product-category,
+    .type-product {
       background-color: $white;
       padding: 0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       transition: $transition;
       box-shadow: 0 6px 15px rgba($black, 0.04);
@@ -38,6 +40,12 @@
         .woocommerce-loop-category__title {
           color: $primary;
         }
+      }
+
+      .add_to_cart_button {
+        padding: gutter(1.8);
+        background-color: $black;
+        color: $white;
       }
 
       a {

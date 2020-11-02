@@ -62,4 +62,11 @@
 
 .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
   width: gutter(40);
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-radius: 0 !important;
+}
+
+.dgwt-wcas-search-input {
+  height: 44px !important;
 }

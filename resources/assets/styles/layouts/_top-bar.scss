@@ -13,6 +13,14 @@
     justify-content: space-between;
   }
 
+  &__right {
+    display: flex;
+
+    div:first-child {
+      margin-right: gutter(3.6);
+    }
+  }
+
   &__nav {
     list-style-type: none;
     padding: 0;
