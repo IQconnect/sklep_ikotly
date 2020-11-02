@@ -36,3 +36,25 @@
     }
   }
 }
+
+.nav-tabs {
+  max-width: gutter(40);
+  margin-bottom: gutter(1);
+  border-color: $primary;
+
+  .nav-link {
+    color: $black;
+    border-radius: 0;
+
+    &:hover {
+      border-color: rgba($primary, 0.2);
+      color: $primary;
+    }
+
+    &.active {
+      background-color: $bg;
+      border-color: $primary $primary $bg;
+      color: $primary;
+    }
+  }
+}

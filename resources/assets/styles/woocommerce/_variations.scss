@@ -1,6 +1,7 @@
 .button-variable-item {
-  border: 1px solid $primary !important;
+  border: 2px solid $primary !important;
   box-shadow: none !important;
+  margin: 0 gutter(0.8) 0 0 !important;
 
   &.selected {
     background-color: $primary !important;
@@ -17,5 +18,5 @@
 .variations {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: gutter(3);
+  margin-bottom: gutter(1);
 }
