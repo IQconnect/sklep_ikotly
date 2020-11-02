@@ -2,7 +2,7 @@
   &__products {
     .product-category {
       background-color: $white;
-      padding: 0;
+      padding: gutter(1.5);
       display: flex;
       justify-content: center;
       transition: $transition;
@@ -26,7 +26,7 @@
 
         img {
           display: block;
-          height: gutter(20);
+          height: gutter(15);
           object-fit: contain;
           object-position: center;
           margin: auto;

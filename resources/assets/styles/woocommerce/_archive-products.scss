@@ -6,6 +6,10 @@
     grid-gap: gutter(2);
     text-align: center;
 
+    &--subcat {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
     &-cover {
       width: gutter(20);
       height: gutter(20);
