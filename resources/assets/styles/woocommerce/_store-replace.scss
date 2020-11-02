@@ -88,4 +88,8 @@
   .woocommerce-variation-add-to-cart {
     margin-top: gutter(5);
   }
+
+  .added_to_cart {
+    display: none !important;
+  }
 }
