@@ -168,3 +168,11 @@ function new_loop_shop_per_page( $cols ) {
 
 register_nav_menu( 'left', 'left menu' );
 register_nav_menu( 'right', 'right menu' );
+add_filter('woocommerce_show_variation_price', function() {return true;});
+
+
+/* Make Variation Visible */
+add_filter('woocommerce_variation_is_visible', 'product_variation_always_shown', 10, 2);
+function product_variation_always_shown($is_visible, $id){
+    return true;
+}
