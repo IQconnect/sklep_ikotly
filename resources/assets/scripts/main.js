@@ -15,6 +15,7 @@ import hamburger from './components/hamburger';
 import header from './components/header';
 //import submenu from './components/submenu';
 import menu from './components/menu';
+import catnav from './components/catnav';
 import slider from './components/slider';
 import banner from './components/banner';
 import products from './components/products';
@@ -39,6 +40,7 @@ jQuery(document).ready(() => {
   header.init();
   //submenu.init();
   menu.init();
+  catnav.init();
   priceFormat.init();
   preloader.init();
   hamburger.init();

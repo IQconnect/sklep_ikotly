@@ -12,6 +12,10 @@
   grid-template-columns: gutter(35) auto;
   font-family: $font-main;
 
+  @include media("<md") {
+    grid-template-columns: 1fr;
+  }
+
   &--full {
     grid-template-columns: auto;
   }
@@ -22,6 +26,18 @@
     list-style-type: none;
     grid-gap: gutter(2);
     padding: gutter(2) 0;
+
+    @include media("<xl") {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include media("<lg") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media("<md") {
+      grid-template-columns: 1fr;
+    }
 
     .product-category,
     .type-product {

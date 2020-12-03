@@ -6,8 +6,18 @@
     grid-gap: gutter(2);
     text-align: center;
 
+    @include media("<md") {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+
     &--subcat {
       grid-template-columns: repeat(4, 1fr);
+
+      @include media("<md") {
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+      }
     }
 
     &-cover {
@@ -16,6 +26,11 @@
       overflow: hidden;
       margin: auto;
       transition: $transition;
+
+      @include media("<md") {
+        width: gutter(15);
+        height: gutter(15);
+      }
     }
 
     .product {
@@ -24,6 +39,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @include media("<md") {
+        padding: gutter(3);
+      }
 
       a {
         display: flex;
@@ -58,6 +77,10 @@
         min-height: gutter(12);
         display: block;
         transition: $transition;
+
+        @include media("<md") {
+          min-height: gutter(8);
+        }
       }
 
       .amount {

@@ -176,3 +176,26 @@ add_filter('woocommerce_variation_is_visible', 'product_variation_always_shown',
 function product_variation_always_shown($is_visible, $id){
     return true;
 }
+
+
+function get_current_product_category(){
+
+    global $post;
+    $terms = get_the_terms( $post->ID, 'product_cat' );
+    foreach ($terms as $term ) {
+        $product_cat_id = $term->term_id;
+        $product_cat_name = $term->name;
+        break;
+    }
+
+    $parent = get_ancestors( $product_cat_id, 'product_cat' );
+    $parent_id = $parent[count($parent)-1];
+    $parent_name = get_term($parent_id)->name;
+
+    if($parent) {
+        return $parent_name;
+    }
+    else {
+        return $product_cat_name;
+    }
+}

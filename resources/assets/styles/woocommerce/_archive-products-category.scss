@@ -24,6 +24,10 @@
         padding: gutter(6) gutter(2);
         text-align: center;
 
+        @include media("<md") {
+          padding: gutter(1.5) gutter(0.5);
+        }
+
         img {
           display: block;
           height: gutter(15);
@@ -39,6 +43,10 @@
           padding-top: gutter(4);
           text-align: center;
           transition: $transition;
+
+          @include media("<md") {
+            padding-top: gutter(1);
+          }
         }
 
         .count {

@@ -3,20 +3,74 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: block;
+
+  @include media("<md") {
+    margin-bottom: gutter(4);
+    display: none;
+  }
+
+  &--active {
+    @include media("<md") {
+      margin-bottom: gutter(4);
+      margin-top: - gutter(4);
+      display: block;
+    }
+  }
+
+  &__button {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: gutter(2);
+    margin-bottom: gutter(4);
+    box-shadow: 0 6px 15px rgba($black, 0.04);
+    background-color: $primary;
+    color: $white;
+    cursor: pointer;
+
+    i {
+      padding-left: gutter(1);
+    }
+
+    &:hover {
+      background-color: lighten($primary, 5);
+    }
+
+    @include media("<md") {
+      display: flex;
+    }
+  }
+
+  &__category {
+    &--hide {
+      @include media("<md") {
+        display: none;
+      }
+    }
+  }
 
   &__block {
     position: relative;
     display: grid;
+    align-items: center;
     grid-template-columns: 70% 30%;
     gap: gutter(2);
     //flex-direction: row;
     //justify-content: space-between;
-    align-items: center;
     background-color: $white;
     padding: gutter(2);
     margin-bottom: gutter(2);
     box-shadow: 0 6px 15px rgba($black, 0.04);
     transition: $transition;
+
+    @include media("<md") {
+      padding: gutter(0.5) gutter(2);
+      margin-bottom: gutter(0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     &:hover {
       background-color: lighten($bg, 0.5);
@@ -41,6 +95,11 @@
     right: gutter(1);
     bottom: gutter(1);
     padding-left: gutter(2);
+
+    @include media("<md") {
+      width: gutter(5);
+      height: gutter(5);
+    }
 
     img {
       height: 100%;
