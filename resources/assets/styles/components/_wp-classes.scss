@@ -65,8 +65,24 @@
   border-top-width: 0 !important;
   border-bottom-width: 0 !important;
   border-radius: 0 !important;
+
+  @include media("<md") {
+    width: gutter(30);
+  }
 }
 
 .dgwt-wcas-search-input {
   height: 44px !important;
+}
+
+.dgwt-wcas-search-submit {
+  @include media("<md") {
+    background-color: $primary !important;
+  }
+}
+
+.dgwt-wcas-search-submit::before {
+  @include media("<md") {
+    border-color: transparent $primary transparent !important;
+  }
 }

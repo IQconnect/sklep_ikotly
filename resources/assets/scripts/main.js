@@ -22,6 +22,7 @@ import products from './components/products';
 import preloader from './components/preloader';
 import wp_block_gallery from './components/wp-block-gallery';
 import priceFormat from './components/price-format';
+import search from './components/search';
 
 
 /** Populate Router instance with DOM routes */
@@ -43,6 +44,7 @@ jQuery(document).ready(() => {
   catnav.init();
   priceFormat.init();
   preloader.init();
+  search.init();
   hamburger.init();
   wp_block_gallery.init();
   //new WOW.WOW.init();

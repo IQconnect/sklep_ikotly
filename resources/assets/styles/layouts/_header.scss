@@ -31,6 +31,10 @@
     font-size: 18px;
   }
 
+  @include media("<md") {
+    top: 0;
+  }
+
   &__brand {
     img {
       @include cssLock("height", 360, $container, (32, 45));
@@ -58,6 +62,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    display: none;
+    padding-right: gutter(2);
+
+    @include media("<=lg") {
+      display: inline-block;
+    }
+
+    i {
+      color: $black;
+      font-size: 25px;
+    }
   }
 
   &__hamburger {
@@ -191,6 +214,15 @@
     @include media(">=lg") {
       padding: 0;
       flex-direction: row;
+    }
+
+    &--mobile {
+      padding-top: 0;
+      display: none;
+
+      @include media("<=lg") {
+        display: block;
+      }
     }
   }
 }
