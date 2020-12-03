@@ -6,6 +6,14 @@
     grid-gap: gutter(2);
     text-align: center;
 
+    @include media("<1500px") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media("<1200px") {
+      grid-template-columns: 1fr;
+    }
+
     @include media("<md") {
       grid-template-columns: 1fr;
       padding: 0;

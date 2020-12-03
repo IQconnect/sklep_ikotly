@@ -71,12 +71,20 @@
         padding: gutter(6) gutter(2);
         text-align: center;
 
+        @include media("<md") {
+          padding: gutter(3) gutter(1);
+        }
+
         img {
           display: block;
           height: gutter(20);
           object-fit: contain;
           object-position: center;
           margin: auto;
+
+          @include media("<md") {
+            height: gutter(10);
+          }
         }
 
         h2 {
@@ -86,6 +94,10 @@
           padding-top: gutter(4);
           text-align: center;
           transition: $transition;
+
+          @include media("<md") {
+            font-size: 20px;
+          }
         }
 
         .count {

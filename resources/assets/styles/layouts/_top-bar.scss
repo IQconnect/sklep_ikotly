@@ -7,7 +7,7 @@
   z-index: 900;
   color: $black;
 
-  @include media("<md") {
+  @include media("<=lg") {
     display: none;
   }
 

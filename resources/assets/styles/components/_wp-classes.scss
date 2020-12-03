@@ -61,14 +61,10 @@
 }
 
 .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
-  width: gutter(40);
+  width: gutter(25);
   border-top-width: 0 !important;
   border-bottom-width: 0 !important;
   border-radius: 0 !important;
-
-  @include media("<md") {
-    width: gutter(30);
-  }
 }
 
 .dgwt-wcas-search-input {
@@ -76,13 +72,13 @@
 }
 
 .dgwt-wcas-search-submit {
-  @include media("<md") {
+  @include media("<=lg") {
     background-color: $primary !important;
   }
 }
 
 .dgwt-wcas-search-submit::before {
-  @include media("<md") {
+  @include media("<=lg") {
     border-color: transparent $primary transparent !important;
   }
 }
