@@ -90,13 +90,13 @@ the readme will list any important changes.
             </div>
             @else
               <div class="store__slider">
-                <div class="store__product">
-                  <div class="store__images">
-                    <div class="store__image">
-                      {!! image($gallery[0], 'full', '') !!}
+                  <div class="store__product">
+                    <div class="store__images">
+                      <div class="store__image">
+                        {!! image($gallery[0], 'full', '') !!}
+                      </div>
                     </div>
                   </div>
-                </div>
               </div>
           @endif
         </div>
