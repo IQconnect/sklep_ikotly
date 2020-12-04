@@ -2,6 +2,10 @@
   width: 100%;
   height: gutter(60);
 
+  @include media("<lg") {
+    height: auto;
+  }
+
   img {
     width: 100%;
     height: 100%;

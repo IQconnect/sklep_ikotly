@@ -4,8 +4,16 @@
   gap: gutter(10);
   padding: 0;
 
-  @include media("<md") {
+  @include media("<xl") {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include media("<lg") {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @include media("<md") {
+    grid-template-columns: 1fr;
   }
 
   // &__item {

@@ -2,10 +2,8 @@
 .button-wo,
 .wp-block-file a,
 .wp-block-button__link {
-  @include cssLock("font-size", 360, $container, (14, 18));
-
   color: $white;
-  //font-size: 1.2rem;
+  font-size: 18px;
   font-family: $font-main;
   padding: gutter(1) gutter(3);
   display: inline-block;

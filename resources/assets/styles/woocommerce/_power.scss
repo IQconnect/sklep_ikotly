@@ -3,9 +3,21 @@
   justify-content: center;
   align-items: center;
 
+  h2 {
+    margin-bottom: gutter(6);
+  }
+
   &__img {
     width: auto;
     height: gutter(50);
+
+    @include media("<=lg") {
+      width: 40%;
+    }
+
+    @include media("<md") {
+      display: none;
+    }
   }
 
   &__photo {
@@ -21,9 +33,19 @@
   &__content {
     width: 65%;
     background-color: $white;
-    padding: gutter(6);
+    padding: gutter(4);
     display: block;
     box-shadow: $shadow;
     margin-left: gutter(4);
+
+    @include media("<=lg") {
+      width: 70%;
+    }
+
+    @include media("<md") {
+      width: 100%;
+      margin: 0;
+      padding: gutter(2) gutter(3);
+    }
   }
 }

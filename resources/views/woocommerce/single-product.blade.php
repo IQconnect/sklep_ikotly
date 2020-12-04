@@ -63,7 +63,7 @@ the readme will list any important changes.
   @php $sections = get_field('components') @endphp
   @php
     do_action('get_header', 'shop');
-    do_action('woocommerce_before_main_content');
+    //do_action('woocommerce_before_main_content');
   @endphp
   @while(have_posts())
     @php

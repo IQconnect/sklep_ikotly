@@ -3,6 +3,10 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: gutter(4);
 
+  @include media("<md") {
+    grid-template-columns: 1fr;
+  }
+
   &--single {
     display: block;
 

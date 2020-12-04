@@ -55,6 +55,11 @@
       background-color: $bg;
       border-color: $primary $primary $bg;
       color: $primary;
+
+      @include media("<md") {
+        background-color: $bg-dark;
+        border-color: $primary $primary $bg-dark;
+      }
     }
   }
 }

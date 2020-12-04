@@ -3,6 +3,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2px;
+
+    @include media("<lg") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media("<md") {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__tab {
@@ -15,6 +23,10 @@
       font-family: $font-main;
       font-size: 18px;
       font-weight: $medium;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .active {
@@ -26,14 +38,28 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: gutter(3);
+
+    @include media("<1600px") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media("<1300px") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media("<md") {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      padding: 0 gutter(0.5);
+    }
   }
 
   &__file {
     margin: 0;
 
     a {
-      font-size: 22px;
-      padding: gutter(3) gutter(3) gutter(3) 0;
+      font-size: 16px;
+      padding: gutter(2) gutter(3) gutter(1) 0;
       font-weight: $medium;
       font-family: $font-main;
       display: flex;
@@ -41,6 +67,10 @@
       border-radius: $gutter;
       text-decoration: none;
       color: $primary;
+
+      @include media("<md") {
+        padding: gutter(1.5);
+      }
 
       &::before {
         content: url("../images/files.svg");

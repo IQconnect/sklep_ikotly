@@ -1,95 +1,134 @@
-.store__info {
-  .woocommerce {
-    &-Price-amount {
-      color: red;
-      font-weight: bold;
-      font-size: 24px;
-      padding: gutter(2) 0;
-      display: inline-block;
-    }
-  }
+.single-product-data {
+  .store__info {
+    text-align: left !important;
 
-  .product_title {
-    font-weight: $bold;
-    font-family: $font-title;
-  }
-
-  .posted_in {
-    display: none;
-  }
-
-  .cart {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-
-    .input-text {
-      height: gutter(4.7);
-      border-radius: 0;
-      border: 2px solid $primary;
-      padding-left: gutter(1.6);
-    }
-
-    select {
-      height: gutter(4.7);
-      border-radius: 0;
-      border: 2px solid $primary;
-      padding: 0 gutter(1);
-      margin-right: gutter(1.5);
-    }
-
-    .button-wo {
-      margin: 0;
-      outline: 0;
-      border: 0;
-    }
-
-    .quantity {
-      margin-right: gutter(2);
+    @include media("<=1350px") {
+      margin: auto;
+      padding: gutter(6) 0;
+      text-align: center;
+      background-color: $gray;
       position: relative;
 
-      &.hidden {
-        margin-right: 0;
+      &::after {
+        content: "";
+        background: $gray;
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%;
       }
 
       &::before {
-        content: "Ilość";
+        content: "";
+        background: $gray;
+        display: block;
+        height: 100%;
+        width: 100%;
         position: absolute;
-        bottom: calc(100% + 8px);
+        top: 0;
+        right: -100%;
       }
     }
-  }
 
-  .variations_button {
-    display: flex;
-    align-items: flex-end;
-  }
+    .woocommerce {
+      &-Price-amount {
+        color: red;
+        font-weight: bold;
+        font-size: 24px;
+        padding: gutter(2) 0;
+        display: inline-block;
+      }
+    }
 
-  .variations_form {
-    display: block;
-    align-items: flex-end;
-  }
+    .product_title {
+      font-weight: $bold;
+      font-family: $font-title;
+      padding-top: gutter(8);
 
-  .value {
-    position: relative;
-  }
+      @include media("<md") {
+        padding-top: gutter(2);
+      }
+    }
 
-  .reset_variations {
-    position: absolute;
-    left: 0;
-    bottom: - gutter(3);
-    display: none !important;
-  }
+    .posted_in {
+      display: none;
+    }
 
-  .woocommerce-variation.single_variation {
-    margin-bottom: gutter(6);
-  }
+    .cart {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
 
-  .woocommerce-variation-add-to-cart {
-    margin-top: gutter(5);
-  }
+      .input-text {
+        height: gutter(4.7);
+        border-radius: 0;
+        border: 2px solid $primary;
+        padding-left: gutter(1.6);
+      }
 
-  .added_to_cart {
-    display: none !important;
+      select {
+        height: gutter(4.7);
+        border-radius: 0;
+        border: 2px solid $primary;
+        padding: 0 gutter(1);
+        margin-right: gutter(1.5);
+      }
+
+      .button-wo {
+        margin: 0;
+        outline: 0;
+        border: 0;
+      }
+
+      .quantity {
+        margin-right: gutter(2);
+        position: relative;
+
+        &.hidden {
+          margin-right: 0;
+        }
+
+        &::before {
+          content: "Ilość";
+          position: absolute;
+          bottom: calc(100% + 8px);
+        }
+      }
+    }
+
+    .variations_button {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .variations_form {
+      display: block;
+      align-items: flex-end;
+    }
+
+    .value {
+      position: relative;
+    }
+
+    .reset_variations {
+      position: absolute;
+      left: 0;
+      bottom: - gutter(3);
+      display: none !important;
+    }
+
+    .woocommerce-variation.single_variation {
+      margin-bottom: gutter(6);
+    }
+
+    .woocommerce-variation-add-to-cart {
+      margin-top: gutter(5);
+    }
+
+    .added_to_cart {
+      display: none !important;
+    }
   }
 }
