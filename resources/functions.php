@@ -122,7 +122,7 @@ function blog() {
         'orderby'   => 'date',
         'sort_order' => 'asc',
         'post_type'  => 'post',
-        'category'   => 3,
+        'category'   => 140,
     ));
 
     return $posts;
