@@ -29,10 +29,10 @@ global $product;
 @php
   $powers = $product->attributes['pa_moc']['options'];
   $liters = $product->attributes['pa_pojemnosc']['options'];
-  $vat = $product->attributes['pa_vat']['options']
+  $vat = $product->attributes['pa_vat']['options'];
+  $type = get_the_terms( $product->id,'product_type')[0]->slug;
 @endphp
-
-@if($product->attributes)
+@if(($product->attributes) && ($type == 'variable'))
   <!-- produkty bez vat -->
   @if(!$vat)
     <div class="tab-content" id="myTabContent">
