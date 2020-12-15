@@ -1,6 +1,6 @@
 .banner-img {
   width: 100%;
-  height: gutter(60);
+  // height: gutter(60);
 
   @include media("<lg") {
     height: auto;
